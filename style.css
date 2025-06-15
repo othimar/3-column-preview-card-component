@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,700&family=Lexend+Deca&display=swap');
+
+.big-shoulders-font {
+  font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.lexend-deca-font {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*@font-face{
+    font-family: "Lexend Deca";
+    src: url(./font/lexend/LexendDeca-VariableFont_wght.ttf);
+}
+
+@font-face{
+    font-family: "Big Shoulders";
+    src: url(./font/BigShoulders-VariableFont_opsz,wght.ttf);
+}*/
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+    align-items: center;
+}
+
+main{
+    flex-grow:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.container{
+    display:flex;
+    flex-direction:row;
+    max-width:800px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.item{
+    display:flex;
+    flex-direction: column;
+    
+    padding: 40px;
+    align-self:center;
+    justify-content: start;
+}
+
+.item > img{
+    width:45px;
+    height: auto;
+}
+
+div:nth-child(1){
+    background-color: var(--bright-orange);
+}
+div:nth-child(2) {
+    background-color: var(--dark-cyan);
+}
+div:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+}
+
+p{
+    line-height: 1.5em;
+    color: hsla(0,0%,100%, 0.75);
+}
+h2{
+    text-transform: uppercase;
+    font-size: 30px;
+    color:hsl(0,0%,100%);
+}
+
+button{
+    padding: 12px;
+    margin-top: 40px;
+    align-self: start;
+    font-size: 16px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.item > button:hover{
+    background-color: transparent;
+    color: white !important;
+    cursor: pointer;
+}
+
+.item:nth-child(1) > button{
+    color: var(--bright-orange);
+}
+
+.item:nth-child(2) > button{
+    color: var(--dark-cyan);
+}
+
+.item:nth-child(3) > button{
+    color: var(--very-dark-cyan);
+}
+
+
+
+@media only screen and (max-width: 680px){
+    .container{
+        flex-direction: column;
+        border-radius: 0;
+    }
+}
