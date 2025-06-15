@@ -43,8 +43,7 @@ Users should be able to:
 
 ### What I learned
 
-
-### Continued development
+It's a refresher after a long period without doing web development
 
 ## Author
 
