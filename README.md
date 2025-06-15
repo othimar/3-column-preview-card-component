@@ -26,7 +26,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot.png)
-
+![](./screenshot2.png)
 ### Links
 
 - Solution URL: [https://github.com/othimar/3-column-preview-card-component](https://github.com/othimar/3-column-preview-card-component)

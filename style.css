@@ -25,16 +25,22 @@
     src: url(./font/BigShoulders-VariableFont_opsz,wght.ttf);
 }*/
 
-html, body{
-    margin: 0;
-    padding: 0;
-}
-
 *{
     box-sizing: border-box;
     --bright-orange: hsl(31, 77%, 52%);
     --dark-cyan: hsl(184, 100%, 22%);
     --very-dark-cyan: hsl(179, 100%, 13%);
+    --back: hsl(181, 49%, 90%);
+    --grey : hsl(5,0,60%);
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--back);
 }
 
 body{
@@ -52,9 +58,8 @@ main{
 }
 .container{
     display:flex;
-    flex-direction:row;
-    max-width:800px;
-    border-radius: 16px;
+    flex-direction:column;
+    max-width:900px;
     overflow: hidden;
 }
 
@@ -62,7 +67,7 @@ main{
     display:flex;
     flex-direction: column;
     
-    padding: 40px;
+    padding: 20px 40px;
     align-self:center;
     justify-content: start;
 }
@@ -83,48 +88,62 @@ div:nth-child(3) {
 }
 
 p{
-    line-height: 1.5em;
+    line-height: 1.8em;
+    font-size: 1.2em;
     color: hsla(0,0%,100%, 0.75);
 }
-h2{
-    text-transform: uppercase;
-    font-size: 30px;
-    color:hsl(0,0%,100%);
+
+h1{
+    color: var(--grey);
+    padding-left:40px;
 }
 
-button{
-    padding: 12px;
+h2{
+    text-transform: uppercase;
+    font-size: 3em;
+    color:hsl(0,0%,100%);
+    margin-bottom: 5px;
+}
+
+.button-learn{
+    padding: 10px 20px;
     margin-top: 40px;
     align-self: start;
-    font-size: 16px;
+    font-size: 18px;
     border: 2px solid white;
     background-color: white;
     border-radius: 30px;
 }
 
-.item > button:hover{
-    background-color: transparent;
-    color: white !important;
-    cursor: pointer;
+.button-learn:hover{
+   color:white;
+   cursor:pointer;
+   background-color: transparent;
 }
 
-.item:nth-child(1) > button{
+.b1{
     color: var(--bright-orange);
 }
 
-.item:nth-child(2) > button{
+
+.b2{
     color: var(--dark-cyan);
 }
 
-.item:nth-child(3) > button{
+
+.b3{
     color: var(--very-dark-cyan);
 }
 
 
 
-@media only screen and (max-width: 680px){
+@media only screen and (min-width: 680px){
     .container{
-        flex-direction: column;
-        border-radius: 0;
+        flex-direction: row;
+        border-radius: 16px;
+    }
+    h1{
+        text-align: center;
+        padding-left: 0;
     }
 }
